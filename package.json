@@ -19,5 +19,5 @@
   },
   "dependencies": {
     "node-gyp-build": "^3.5.1"
-  },
+  }
 }
