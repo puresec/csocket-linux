@@ -1,0 +1,23 @@
+{
+  "name": "csocket-linux",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prebuildify": "prebuildify --target node@4.3.2 --target node@6.10.3 --target node@8.10.0 --strip",
+    "prepack": "docker run --volume `pwd`:/src --workdir /src node:11 npm run prebuildify",
+    "test": "nyc --reporter=lcov --reporter=text --reporter=html mocha --recursive test/unit/ && eslint src/ test/"
+  },
+  "devDependencies": {
+    "@puresec/eslint-config-base": "^1.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "get-port": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nan": "^2.11.1",
+    "nyc": "^13.1.0",
+    "prebuildify": "^2.9.1"
+  },
+  "dependencies": {
+    "node-gyp-build": "^3.5.1"
+  },
+}
