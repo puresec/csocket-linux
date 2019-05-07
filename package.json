@@ -1,6 +1,6 @@
 {
   "name": "csocket-linux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "prebuildify": "prebuildify --target node@4.3.2 --target node@6.10.3 --target node@8.10.0 --strip",
